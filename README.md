@@ -17,3 +17,5 @@ Edite o `index.html` (textos, roteiro, quartos e compras ficam nas listas dentro
 
 - A página não é indexada por buscadores (`noindex`), mas qualquer pessoa com o link consegue abrir.
 - Para a pré-visualização com foto no WhatsApp, troque `img/c2a.jpg` na tag `og:image` pelo endereço completo, ex.: `https://SEU-USUARIO.github.io/guaeca39/img/c2a.jpg`.
+
+- 
