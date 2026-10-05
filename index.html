@@ -148,6 +148,8 @@ details.cat[open] summary::after{content:"–  Fechar";background:var(--muted)}
 details.cat summary:hover::after{background:var(--ink)}
 details.cat{transition:border-color .2s}details.cat:hover{border-color:var(--sea)}
 details.cat summary{flex-wrap:wrap;align-items:center}details.cat summary>span:first-child{flex:1 1 180px;min-width:0}
+.resp{display:block;margin-top:6px;font-size:.84rem;font-weight:700;color:var(--sea)}.resp::before{content:"Responsáveis: ";font-weight:600;color:var(--muted)}
+.tblwrap .tbl{border:0;border-top:1px solid var(--line);border-radius:0 0 12px 12px}
 .menu-hint{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;color:var(--sea);margin:4px 0 12px}
 .menu-hint b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--sea);color:#fff;font-size:.9rem}
 details.cat .items{padding:0 16px 14px;display:grid;grid-template-columns:1fr auto;gap:5px 12px;font-size:.9rem}
@@ -172,7 +174,7 @@ details.cat .by{grid-column:1/-1;font-size:.8rem;color:var(--sea);font-weight:60
 .checks label:has(input:checked) span{text-decoration:line-through;color:var(--muted)}
 
 /* road */
-.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .road .card h3{margin-bottom:8px}
 .road .card p{font-size:.92rem;color:var(--muted)}
 .road .card.warn{background:var(--alert-soft);border-color:transparent}
@@ -205,7 +207,7 @@ dialog#lb{border:0;padding:0;background:transparent;max-width:min(96vw,1200px)}
 dialog#lb::backdrop{background:rgba(5,15,17,.86)}
 dialog#lb img{max-width:100%;max-height:86vh;display:block;border-radius:10px}
 dialog#lb button{position:absolute;top:8px;right:8px;font:700 .9rem var(--body);background:#fff;color:#0F2E33;border:0;border-radius:99px;padding:8px 14px;cursor:pointer}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
 .svc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
 .svc .ok{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--leaf-soft);color:var(--leaf);padding:2px 8px;border-radius:99px}
 .svc h3{margin-top:10px}.svc p{font-size:.92rem;color:var(--muted);margin-top:6px}
@@ -221,7 +223,7 @@ dialog#lb button{position:absolute;top:8px;right:8px;font:700 .9rem var(--body);
 </head>
 <body>
 <nav class="top" aria-label="Seções"><div class="in">
-  <a href="#antes">Antes</a><a href="#roteiro">Roteiro</a><a href="#casas">Casas</a><a href="#servicos">Serviços</a><a href="#compras">Compras</a><a href="#rateio">Rateio</a><a href="#estrada">Estrada</a>
+  <a href="#antes">Antes</a><a href="#compras">Compras</a><a href="#roteiro">Roteiro</a><a href="#casas">Casas</a><a href="#servicos">Serviços</a><a href="#rateio">Rateio</a><a href="#estrada">Estrada</a>
 </div></nav>
 
 <div class="wrap">
@@ -229,7 +231,7 @@ dialog#lb button{position:absolute;top:8px;right:8px;font:700 .9rem var(--body);
     <div>
       <p class="eyebrow">Guaecá · São Sebastião (SP) · 09 a 12 de outubro de 2026</p>
       <h1>Quatro dias, onze núcleos, <em>um só mar.</em></h1>
-      <p class="lede">Um feriado para desacelerarmos juntos. Hospedagem, serviços e cardápio já estão encaminhados (mas ainda cabem sugestões, alterações e melhorias). Tudo pensado para que o único compromisso deste feriado seja APROVEITAR!</p>
+      <p class="lede">Tudo pensado para que o único compromisso seja APROVEITAR!</p>
       <div class="facts">
         <div class="fact"><b>29 pessoas</b><span>21 adultos · 8 bebês, crianças e adolescentes</span></div>
         <div class="fact"><b>2 casas vizinhas como uma única hospedagem</b><span>Rua Tamandaré, Quadra 5, Guaecá, São Sebastião (SP)</span><span class="maps"><a href="https://www.google.com/maps/search/?api=1&query=Rua+Tamandar%C3%A9+Quadra+5+Guaec%C3%A1+S%C3%A3o+Sebasti%C3%A3o+SP" target="_blank" rel="noopener">Google Maps</a> · <a href="https://waze.com/ul?q=Rua%20Tamandar%C3%A9%20Guaec%C3%A1%20S%C3%A3o%20Sebasti%C3%A3o%20SP&navigate=yes" target="_blank" rel="noopener">Waze</a></span></div>
@@ -257,23 +259,36 @@ dialog#lb button{position:absolute;top:8px;right:8px;font:700 .9rem var(--body);
   <section id="antes">
     <div class="sec-head">
       <p class="eyebrow">Combinados até a descida</p>
-      <h2>Quatro pontos para chegarmos tranquilos</h2>
-      <p class="muted">Tudo alinhado pelo grupo do WhatsApp.</p>
+      <h2>Três pontos antes de pegar a estrada</h2>
     </div>
     <div class="steps">
-      <div class="step"><span class="when">no grupo</span><h3>Quem fica com o quê?</h3><p>Sete frentes de compra, escolhidas em conjunto conforme a disponibilidade de cada núcleo. Assim distribuímos esforços, espaço nos carros e valores de forma equilibrada.</p></div>
-      <div class="step"><span class="when">com antecedência</span><h3>Berços portáteis</h3><p>As casas não oferecem berço. Famílias com crianças que dormem em berço devem providenciar a locação do seu, caso não tenham.</p></div>
-      <div class="step"><span class="when">até 08/10</span><h3>Última parcela da casa</h3><p>R$ 1.375,00 por núcleo, via Pix para o e-mail do Victor.</p>
+      <div class="step"><span class="when">levar ou alugar</span><h3>Berços portáteis</h3><p>Casas não oferecem berço. Colchões extras disponíveis.</p></div>
+      <div class="step"><span class="when">até 08/10</span><h3>Última parcela da casa</h3><p>R$ 1.375,00 por núcleo, via Pix.</p>
         <div class="pix"><code id="pixkey">victor.peixoto@outlook.com.br</code><button type="button" id="cppix">Copiar</button></div></div>
-      <div class="step"><span class="when">já definido</span><h3>Divisão dos quartos</h3><p>Apenas uma configuração acomodou todos. Cada quarto foi casado com o tamanho de cada núcleo, por isso a divisão é fixa.</p></div>
+      <div class="step"><span class="when">fixa</span><h3>Divisão dos quartos</h3><p>Única configuração que acomoda os 29.</p></div>
     </div>
   </section>
+
+  <section id="compras">
+    <div class="sec-head">
+      <p class="eyebrow">Compras</p>
+      <h2>Sete frentes, definidas em conjunto</h2>
+    </div>
+    <div class="own">
+      <div><p class="eyebrow" style="color:#FBEBC4">Frente 1 · Todos</p><h3>Bebidas e café da manhã: cada um leva os seus</h3>
+        <p>Gostos distintos, cada núcleo leva suas preferências. Na mesa, tudo é compartilhado, e quem não bebe álcool não paga por ele.</p></div>
+      <ul><li>Bebidas alcoólicas e não alcoólicas</li><li>Pães, ovos, iogurtes, frios, queijos e frutas</li><li>Cápsulas de café (as casas têm Nespresso)</li><li>Achocolatados, whey, barrinhas, chocolates e biscoitos</li><li>Itens específicos (requeijões, ricota, sem lactose, sem glúten, adoçantes etc.)</li><li>Comidas, leites e papinhas das crianças</li></ul>
+    </div>
+    <p class="menu-hint"><b>+</b> Toque em cada frente para ver itens e quantidades.</p>
+    <div class="menu" id="menu"></div>
+  </section>
+
 
   <section id="roteiro">
     <div class="sec-head">
       <p class="eyebrow">Roteiro</p>
       <h2>O ritmo dos dias</h2>
-      <p class="muted">Refeições coletivas com horários sugeridos, preparadas pela equipe e servidas na Casa 2, a poucos passos da Casa 1. O restante do tempo é livre.</p>
+      <p class="muted">Refeições coletivas com horários sugeridos, servidas na Casa 2. O resto do tempo é livre.</p>
     </div>
     <div class="days" id="days"></div>
   </section>
@@ -282,100 +297,77 @@ dialog#lb button{position:absolute;top:8px;right:8px;font:700 .9rem var(--body);
     <div class="sec-head">
       <p class="eyebrow">Hospedagem</p>
       <h2>Quem dorme onde</h2>
-      <p class="muted">As casas são vizinhas, praticamente coladas, na Quadra 5 da Rua Tamandaré.</p>
+      <p class="muted">Casas vizinhas, na Quadra 5 da Rua Tamandaré.</p>
     </div>
     <div class="gallery" id="gallery"></div>
-    <p class="insta">Mais fotos e vídeos no perfil das casas: <a href="https://www.instagram.com/guaecabeachhouses" target="_blank" rel="noopener">@guaecabeachhouses no Instagram</a></p>
+    <p class="insta">Mais fotos e vídeos: <a href="https://www.instagram.com/guaecabeachhouses" target="_blank" rel="noopener">@guaecabeachhouses no Instagram</a></p>
     <div class="houses" id="houses"></div>
-    <p class="note">Por que a divisão é fixa: somente esta configuração acomodou os 29, casando cada quarto com o tamanho de cada núcleo. <b>Cada núcleo leva apenas suas toalhas de banho e de rosto/mãos, além dos travesseiros.</b> Roupas de cama e toalhas de praia e de piscina as casas já disponibilizam.</p>
+    <p class="note"><b>Levar: toalhas de banho e de rosto e travesseiros.</b> As casas oferecem roupa de cama, toalhas de praia e de piscina e colchões extras.</p>
   </section>
 
   <section id="servicos">
     <div class="sec-head">
       <p class="eyebrow">Serviços contratados</p>
       <h2>Cuidados que já estão resolvidos</h2>
-      <p class="muted">Contratados previamente para as duas casas, para que ninguém passe o feriado na pia ou no fogão.</p>
     </div>
     <div class="services">
-      <div class="svc"><span class="ok">Todos os dias</span><h3>Cozinha</h3><p>Equipe preparando as refeições coletivas nas duas casas.</p></div>
-      <div class="svc"><span class="ok">Todos os dias</span><h3>Limpeza</h3><p>Casas arrumadas e limpas diariamente.</p></div>
-      <div class="svc"><span class="ok">Todos os dias</span><h3>Serviço de praia</h3><p>Montagem e desmontagem de barracas e cadeiras, além de drinks na areia.</p></div>
-      <div class="svc"><span class="ok">Sábado</span><h3>Churrasqueiro</h3><p>Brasa e ponto das carnes por conta de quem entende.</p></div>
-      <div class="svc"><span class="ok">Estrutura</span><h3>Bebidas no ponto</h3><p>Cervejeira e adega de vinhos para armazenar e climatizar as bebidas, além de máquina de gelo para drinks e demais bebidas.</p></div>
+      <div class="svc"><span class="ok">Todos os dias</span><h3>Cozinha</h3><p>Refeições coletivas preparadas pela equipe.</p></div>
+      <div class="svc"><span class="ok">Todos os dias</span><h3>Limpeza</h3><p>Casas arrumadas diariamente.</p></div>
+      <div class="svc"><span class="ok">Todos os dias</span><h3>Serviço de praia</h3><p>Barracas, cadeiras e drinks na areia.</p></div>
+      <div class="svc"><span class="ok">Sábado</span><h3>Churrasqueiro</h3><p>Brasa e ponto das carnes.</p></div>
+      <div class="svc"><span class="ok">Estrutura</span><h3>Bebidas no ponto</h3><p>Cervejeira, adega e máquina de gelo.</p></div>
     </div>
     <div class="rule">
-      <div><b>Cada um lava a sua</b>Fora do horário da equipe, quem sujar a louça lava. Boa prática de harmonia e higiene.</div>
-      <div><b>Um copo, um nome</b>Cada pessoa com seu copo identificado. Menos louças e menos descartáveis perdidos.</div>
-      <div><b>Geladeira organizada</b>Prateleira coletiva e espaço reservado para papinhas e leites de cada família.</div>
+      <div><b>Cada um lava a sua</b>Fora do horário da equipe.</div>
+      <div><b>Um copo, um nome</b>Menos louça, menos descartável perdido.</div>
+      <div><b>Geladeira organizada</b>Espaço reservado para as crianças.</div>
     </div>
-  </section>
-
-  <section id="compras">
-    <div class="sec-head">
-      <p class="eyebrow">Compras</p>
-      <h2>Sete frentes, decididas em conjunto</h2>
-      <p class="muted">Uma sugestão de organização, sem nomes definidos. Cada núcleo escolhe no grupo a frente com que prefere contribuir; frentes maiores, como a 2, a 4 e a 5, podem ser divididas entre dois núcleos diferentes. Todas as compras vão para a cozinha da Casa 2.</p>
-    </div>
-    <div class="own">
-      <div><p class="eyebrow" style="color:#FBEBC4">Frente 1 · cada núcleo</p><h3>Bebidas e café da manhã: cada um leva os seus</h3>
-        <p>Os gostos são muito distintos, tanto nas bebidas alcoólicas quanto nas não alcoólicas. Levando as próprias preferências, nenhum núcleo concentra todo o volume e quem não consome álcool não arca com o custo dele. Na mesa, tudo continua sendo compartilhado.</p></div>
-      <ul><li>Bebidas alcoólicas e não alcoólicas</li><li>Pães, ovos e iogurtes</li><li>Frios, queijos e frutas preferidas do café</li><li>Cafés expressos de sua preferência (as casas oferecem máquinas Nespresso)</li><li>Achocolatados, whey protein, barrinhas, chocolates, biscoitos e afins</li><li>Itens específicos (requeijões, cremes de ricota, itens sem lactose, sem glúten, adoçantes etc.)</li><li>Comidas, leites e papinhas das crianças</li></ul>
-    </div>
-    <p class="menu-hint"><b>+</b> Toque em cada frente para ver a lista completa de itens e quantidades.</p>
-    <div class="menu" id="menu"></div>
   </section>
 
   <section id="rateio">
     <div class="sec-head">
       <p class="eyebrow">Rateio</p>
       <h2>Cada um compra uma parte, no fim todos pagam igual</h2>
-      <p class="muted">Guardem e compartilhem as notas fiscais. Ao final, somamos todas as compras das frentes 2 a 7 e dividimos por cabeça: adultos e adolescentes a partir de 15 anos contam 1, crianças de 5 a 12 anos contam meia e bebês até 3 anos não entram na conta. Quem gastou mais recebe a diferença, quem gastou menos complementa. Locação e serviços das casas já estão equacionados à parte.</p>
+      <p class="muted">Guardem as notas fiscais. Somamos as frentes 2 a 7 e dividimos por cabeça: 1 a partir de 15 anos, meia de 5 a 12 anos, bebês isentos. Casa e serviços já estão acertados à parte.</p>
     </div>
     <div class="split">
       <div class="card calc">
         <p class="eyebrow">Estimativa das compras coletivas</p>
         <p class="big mono" id="tot">R$ 0</p>
-        <p class="muted" style="font-size:.88rem;margin-top:6px">Soma das frentes 2 a 7 com 10% de margem. Bebidas e café da manhã ficam fora.</p>
+        <p class="muted" style="font-size:.88rem;margin-top:6px">Frentes 2 a 7, com 10% de margem.</p>
         <div class="kv" style="margin-top:14px"><span>Cabeças</span><b class="mono">24</b></div>
         <div class="kv"><span>Valor estimado por cabeça</span><b class="mono" id="percota">R$ 0</b></div>
         <label for="real">Simulador: digite o total real das notas</label>
         <input id="real" type="number" inputmode="decimal" min="0" step="50">
       </div>
+      <details class="cat tblwrap"><summary><span><h3>Valor por núcleo</h3><span class="muted" style="font-size:.82rem">Cabeças e valor estimado de cada um</span></span></summary>
       <div class="tbl">
         <table>
           <thead><tr><th>Núcleo</th><th>Composição</th><th class="num">Cabeças</th><th class="num">Valor</th></tr></thead>
           <tbody id="rt"></tbody>
           <tfoot><tr><td colspan="2">Total</td><td class="num">24</td><td class="num" id="ftv">R$ 0</td></tr></tfoot>
         </table>
-      </div>
+      </div></details>
     </div>
   </section>
 
-  
-
   <section id="estrada">
     <div class="sec-head">
-      <p class="eyebrow">Estrada e chegada</p>
+      <p class="eyebrow">Estrada</p>
       <h2>Feriado prolongado pede atenção</h2>
-      <p class="muted">A segunda, 12/10, é feriado nacional. Litoral norte cheio na descida e serra movimentada na volta.</p>
+      <p class="muted">Litoral cheio na descida e serra movimentada na volta.</p>
     </div>
     <div class="road">
-      <div class="card"><h3>Chegada</h3><p>Check-in a partir das 13h. Quanto mais cedo na estrada, menor a chance de pegar a serra carregada.</p></div>
-      <div class="card"><h3>Duas rotas possíveis</h3><p>Pela Tamoios (via Ayrton Senna e Carvalho Pinto), descendo em Caraguatatuba e seguindo pela Rio-Santos sentido São Sebastião. Ou pela Mogi-Bertioga, com a Rio-Santos pelo litoral sul, mais curvas e paisagem. Decida no dia, pelo Waze.</p></div>
-      <div class="card"><h3>Antes da serra</h3><p>Tanque cheio ainda em São Paulo, calibragem conferida e água no carro. Carnes e itens refrigerados em caixa térmica com gelo.</p></div>
+      <div class="card"><h3>Rotas</h3><p>Tamoios, descendo por Caraguatatuba, ou Mogi-Bertioga, pela Rio-Santos. Decida no dia, pelo Waze.</p></div>
+      <div class="card"><h3>Antes da serra</h3><p>Tanque cheio, pneus calibrados, água no carro e refrigerados em caixa térmica.</p></div>
       <div class="card"><h3>Volta</h3><p>Check-out às 14h de segunda. Cada núcleo organiza sua saída tendo esse horário como meta para saída definitiva das casas.</p></div>
-      <div class="card"><h3>Seguro em dia</h3><p>Somos embaixadores do seguro: salve o telefone da assistência 24h do seu seguro auto e leve a carteirinha do plano de saúde de toda a família.</p></div>
-    </div>
-    <div class="addr">
-      <code id="addr">Rua Tamandaré, Quadra 5, Guaecá, São Sebastião (SP)</code>
-      <button class="copy" id="cp" type="button">Copiar endereço</button>
-      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Tamandar%C3%A9+Guaec%C3%A1+S%C3%A3o+Sebasti%C3%A3o+SP" target="_blank" rel="noopener">Google Maps</a> <a href="https://waze.com/ul?q=Rua%20Tamandar%C3%A9%20Guaec%C3%A1%20S%C3%A3o%20Sebasti%C3%A3o%20SP&navigate=yes" target="_blank" rel="noopener">Waze</a>
+      <div class="card"><h3>Seguro em dia</h3><p>Telefone da assistência 24h do seguro auto e carteirinha do plano de saúde à mão.</p></div>
     </div>
   </section>
 
   <footer>
-    <span>Com carinho, Victor e Karen. Nos vemos na areia.</span>
-    <span>Atualizado em 23/09/2026</span>
+    <span>Com carinho, Karen, Victor e Léo. Nos vemos na areia.</span>
+    <span>Atualizado em 03/10/2026</span>
   </footer>
 </div>
 
@@ -387,23 +379,23 @@ const brl=v=>"R$ "+Math.round(v).toLocaleString("pt-BR");
 
 const days=[
  {d:"09/10",w:"Sexta · chegada",items:[
-  ["13h","Check-in nas duas casas","Cada núcleo com o seu quarto. Compras para a cozinha da Casa 2."],
-  ["Tarde","Café da tarde e primeiro mergulho","Serviço de praia já disponível."],
-  ["19h","Almojanta de boas-vindas","Dois estrogonofes, de frango e de carne, com arroz branco, legumes, batata palha e salada verde."]]},
+  ["13h","Check-in nas duas casas","Cada núcleo com o seu quarto. Compras concentradas na cozinha da Casa 2, onde ficarão as cozinheiras."],
+  ["Tarde","Café da tarde e primeiro mergulho",""],
+  ["19h","Almojanta de boas-vindas","Estrogonofe de frango e de carne, arroz, legumes, batata palha e salada."]]},
  {d:"10/10",w:"Sábado · churrasco",star:true,items:[
   ["9h","Café da manhã","Estilo hotel e com vista para o mar."],
   ["Manhã","Praia",""],
   ["14h","Churrasco","Com churrasqueiro. Tarde longa, sem pressa e com o pé na areia."],
   ["18h","Brinde dos aniversariantes <span class='tag sun'>momento</span>","Espumante e bolo para os 39 do Victor, os 50 do Alírio, os 63 do Sylvio e os 33 da Lydia."],
-  ["20h","Peixe assado","Peixe ao forno com o arroz, os legumes e as saladas do churrasco."]]},
+  ["20h","Peixe assado","Com arroz, legumes e saladas do churrasco."]]},
  {d:"11/10",w:"Domingo · lasanha",items:[
   ["9h","Café da manhã","Estilo hotel e com vista para o mar."],
   ["Manhã","Praia",""],
   ["14h","Lasanha à bolonhesa","Com salada e legumes assados."],
-  ["20h","Noite de wraps","Cada um monta o seu: frango desfiado, carne em tiras ou opção vegetariana, com saladas e molhos."]]},
- {d:"12/10",w:"Segunda · feriado",items:[
-  ["9h30","Brunch reforçado de despedida","Refeição única do dia, na casa. Sugerimos almoço no caminho de volta."],
-  ["Depois","Últimos momentos","Praia, malas arrumadas e despedidas com calma."],
+  ["20h","Noite de wraps","Frango, carne ou opção vegetariana, com saladas e molhos."]]},
+ {d:"12/10",w:"Segunda · Dia das Crianças",items:[
+  ["9h30","Brunch do Dia das Crianças <span class='tag sun'>pequenos</span>","Refeição única do dia, na casa. Manhã dedicada à criançada: levem os brinquedos preferidos dos seus filhos ou mimos para deixá-la ainda mais especial."],
+  ["Depois","Últimos momentos","Praia, malas e despedidas com calma."],
   ["14h","Check-out e partida","Sugestão de encaixar o almoço em restaurante no caminho de volta, a depender da estrada de escolha."]]}
 ];
 document.getElementById("days").innerHTML=days.map(x=>`<article class="day${x.star?" star":""}"><header><div class="w">${x.w}</div><div class="d">${x.d}</div></header><ul>${x.items.map(i=>`<li><span class="t">${i[0]}</span><span>${i[1]}${i[2]?`<small>${i[2]}</small>`:""}</span></li>`).join("")}</ul></article>`).join("");
@@ -432,16 +424,17 @@ document.getElementById("lbx").addEventListener("click",()=>lb.close());
 lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
 
 const menu=[
- ["Frente 2 · Proteínas do churrasco","Sábado",900,[["Picanha","1,5 kg"],["Flat iron","2 kg"],["Denver steak","1 kg"],["Linguiça toscana","2,5 kg"],["Frango (coxinha da asa, sobrecoxa e filé)","2,5 kg"],["Coração de frango","1 kg"]]],
+ ["Frente 2 · Proteínas do churrasco","Sábado",1200,[["Picanha","1,5 kg"],["Flat iron","2 kg"],["Denver steak","1 kg"],["Linguiça toscana","2,5 kg"],["Frango (coxinha da asa, sobrecoxa e filé)","2,5 kg"],["Coração de frango","1 kg"]]],
  ["Frente 3 · Demais itens do churrasco","Sábado",400,[["Carvão","3 sacos de 8 kg"],["Sal grosso","1 kg"],["Queijo coalho","2 pacotes"],["Pão de alho","2 pacotes"],["Farofa pronta","3 pacotes"],["Acendedor e papel-alumínio","kit"],["Guardanapos","4 pacotes"]]],
  ["Frente 4 · Proteínas das demais refeições","Sexta, sábado e domingo",1100,[["Peito de frango (estrogonofe de frango)","2,5 kg"],["Alcatra ou filé mignon (estrogonofe de carne)","2,5 kg"],["Carne moída de patinho (lasanha)","4 kg"],["Peito de frango em tiras (wraps)","2,5 kg"],["Patinho em tiras (wraps)","2 kg"],["Filé de peixe (sábado à noite)","5,5 kg, cerca de R$ 650 se for salmão congelado comprado em SP; ou cerca de R$ 400 se for fresco da região. Decisão fica a cargo do núcleo que assumirá a responsabilidade."],["Ovos (opção vegetariana)","20 un."]]],
- ["Frente 5 · Mercearia, limpeza e descartáveis","Todas as refeições",1100,[["Arroz","5 kg (2,5 kg na sexta à noite e 2,5 kg no almoço de sábado)"],["Massa de lasanha","6 pacotes de 500 g"],["Passata de tomate","12 un."],["Creme de leite e champignon","10 e 4 un."],["Muçarela em fatias e parmesão ralado","3 kg e 500 g"],["Batata palha","4 pacotes"],["Tortilhas para wrap (Rap10 ou semelhante)","70 un."],["Molhos (iogurte, mostarda, ketchup, pesto)","4 un."],["Azeite, óleo e temperos","kit"],["Sal refinado e açúcar","2 kg de cada"],["Café em pó","2 kg"],["Copos descartáveis para bebidas","200 un."],["Pratinhos e garfinhos para o bolo","50 de cada"],["Papel higiênico e papel-toalha","64 e 12 rolos"],["Detergente, esponjas e sacos de lixo","kit"],["Sabonete líquido e álcool 70%","11 e 2 un."]]],
+ ["Frente 5 · Mercearia, limpeza e descartáveis","Todas as refeições",1400,[["Arroz","5 kg (2,5 kg na sexta à noite e 2,5 kg no almoço de sábado)"],["Massa de lasanha","6 pacotes de 500 g"],["Passata de tomate","12 un."],["Creme de leite e champignon","10 e 4 un."],["Muçarela em fatias e parmesão ralado","3 kg e 500 g"],["Batata palha","4 pacotes"],["Pão de queijo congelado","3 kg"],["Batata congelada","5 kg"],["Tortilhas para wrap (Rap10 ou semelhante)","80 un."],["Molhos (iogurte, mostarda, ketchup, pesto)","4 un."],["Azeite, óleo e temperos","kit"],["Sal refinado e açúcar","2 kg de cada"],["Café em pó","2 kg"],["Copos descartáveis para bebidas","200 un."],["Pratinhos e garfinhos para o bolo","50 de cada"],["Papel higiênico e papel-toalha","64 e 12 rolos"],["Detergente, esponjas e sacos de lixo","kit"],["Sabonete líquido e álcool 70%","11 e 2 un."]]],
  ["Frente 6 · Hortifruti","Os quatro dias",600,[["Cebola e alho","4 kg e 500 g"],["Tomate","5 kg"],["Batata, cenoura, abobrinha, berinjela, palmito e chuchu","8 kg"],["Limão","3 kg"],["Frutas da estação para a mesa coletiva e para sucos e drinks (abacaxi, maracujá, kiwi, lima e morango podem ser boas pedidas)","à vontade"],["Salsinha, cebolinha e ervas finas","kit"]]],
- ["Frente 7 · Mercado local","Idas pontuais em São Sebastião",450,[["Folhas e saladas","para 29 pessoas, por refeição"],["Sorvetes","para a sobremesa"],["Pães (francês, italiano etc.)","conforme a demanda"],["Reposições pontuais","o mínimo de idas possível"]]]
+ ["Frente 7 · Mercado local","Idas pontuais em São Sebastião",900,[["Folhas e saladas","para 29 pessoas, por refeição"],["Sorvetes","para a sobremesa"],["Pães (francês, italiano etc.)","conforme a demanda"],["Reposições pontuais","o mínimo de idas possível"]]]
 ];
+const resp=["Deborah e Renato / Karen e Victor","Alê e Debora","Daniel e Marcela / Lydia e Pelúcia (peixe)","Felipe e Sara / Doug","Bianca e Renan","Giane e Sylvio / Alirio e Paula / Jean e Mali"];
 const sub=menu.reduce((a,m)=>a+m[2],0);
 const est=Math.round(sub*1.1/100)*100;
-document.getElementById("menu").innerHTML=menu.map((m,i)=>`<details class="cat"><summary><span><h3>${m[0]}</h3><span class="muted" style="font-size:.82rem">${m[1]}</span></span><span class="v">~${brl(m[2])}</span></summary><div class="items">${m[3].map(it=>`<span>${it[0]}</span><span>${it[1]}</span>`).join("")}<span class="by">Núcleo responsável: <span class="pill">a definir no grupo</span></span></div></details>`).join("")+
+document.getElementById("menu").innerHTML=menu.map((m,i)=>`<details class="cat"><summary><span><h3>${m[0]}</h3><span class="muted" style="font-size:.82rem">${m[1]}</span><span class="resp">${resp[i]}</span></span><span class="v">~${brl(m[2])}</span></summary><div class="items">${m[3].map(it=>`<span>${it[0]}</span><span>${it[1]}</span>`).join("")}<span class="by">Responsáveis: <span class="pill">${resp[i]}</span></span></div></details>`).join("")+
 `<div class="card"><p class="eyebrow">Resumo</p><div class="kv"><span>Soma das frentes 2 a 7</span><b class="mono">${brl(sub)}</b></div><div class="kv"><span>Margem de 10%</span><b class="mono">${brl(sub*.1)}</b></div><div class="kv"><span>Estimativa arredondada</span><b class="mono">${brl(est)}</b></div><p class="muted" style="font-size:.85rem;margin-top:8px">Quantidades para 29 pessoas e valores de referência. Restrições alimentares ajustam a lista.</p></div>`;
 
 const nuc=[["Victor e Karen","Léo (isento)",2],["Douglas","",1],["Marcela e Niel","Luca (isento)",2],["Sara e Filipe","Laura (isenta)",2],["Alê e De","Pi (isento)",2],["Pelúcia e Lydia","",2],["Alírio e Paula","Clarinha (inteira)",3],["Deborah e Renato","Isa (inteira) e Lulli (meia)",3.5],["Renan e Bianca","Gab (meia)",2.5],["Sylvio e Giane","",2],["Jean e Mali","",2]];
@@ -460,7 +453,7 @@ render(est);
 function copier(btnId,srcId,label){const b=document.getElementById(btnId);b.addEventListener("click",()=>{const el=document.getElementById(srcId);
   const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selecionado";};
   try{navigator.clipboard.writeText(el.textContent).then(()=>{b.textContent="Copiado";setTimeout(()=>b.textContent=label,1800)},sel)}catch(e){sel()}});}
-copier("cp","addr","Copiar endereço");copier("cppix","pixkey","Copiar");
+copier("cppix","pixkey","Copiar");
 })();
 </script>
 </body>
